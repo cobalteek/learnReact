@@ -33,7 +33,7 @@ function App() {
                 ?
                 <PostList remove={removePost} posts={posts} title="Посты про JS"/>
                 :
-                <h1 style={{textAlign: "center"}}>Посты не найдены!</h1>
+                <h1 style={{textAlign: "center",color: "var(--tg-theme-text-color)"}}>Посты не найдены!</h1>
             }
         </div>
     );
