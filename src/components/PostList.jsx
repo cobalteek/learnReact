@@ -1,11 +1,10 @@
 import React from 'react';
 import PostItem from "./PostItem";
-import 'src/styles/PostList.css'
 
 const PostList = ({posts, title, remove}) => {
     return (
         <div>
-            <h1 style={{textAlign: "center"}}>
+            <h1 style={{textAlign: "center",color: "var(--tg-theme-text-color)"}}>
                 {title}
             </h1>
             {posts.map((post, index) =>
