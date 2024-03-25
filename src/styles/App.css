@@ -23,3 +23,6 @@
     background: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color);
 }
+.PostList {
+    color: var(--tg-theme-text-color);
+}
