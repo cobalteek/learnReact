@@ -2,9 +2,19 @@ import React from 'react';
 import PostItem from "./PostItem";
 
 const PostList = ({posts, title, remove}) => {
+
+    if(!posts.length) {
+        return (
+            <h1
+                style={{textAlign: "center", color: "var(--tg-theme-text-color)"}}>
+                Посты не найдены!
+            </h1>
+        )
+    }
+
     return (
         <div>
-            <h1 style={{textAlign: "center",color: "var(--tg-theme-text-color)"}}>
+            <h1 style={{textAlign: "center", color: "var(--tg-theme-text-color)"}}>
                 {title}
             </h1>
             {posts.map((post, index) =>
