@@ -24,7 +24,6 @@ function Posts() {
     const [page, setPage] = useState(1);
     const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
     const lastElement = useRef()
-    console.log(lastElement)
 
     const [fetchPosts, isPostsLoading] = useFetching(async (limit,page) => {
         const response = await PostService.getAll(limit, page);
@@ -79,7 +78,7 @@ function Posts() {
                 ]}
             />
             <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Посты про JS"/>
-            <div ref={lastElement} style={{height: 20}}/>
+            <div ref={lastElement} style={{height: 10}}/>
             {isPostsLoading &&
                 <div style={{display: 'flex',justifyContent: 'center',marginTop: 50}}><Loader/></div>
             }

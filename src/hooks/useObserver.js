@@ -7,11 +7,13 @@ export const useObserver = (ref, canLoad, isLoading, callback) => {
         if(observer.current) observer.current.disconnect();
         var cb = function (entries,observer) {
             if(entries[0].isIntersecting && canLoad) {
+                console.log('чё за')
                 callback()
+
             }
         };
 
-        observer.current = new IntersectionObserver(callback);
+        observer.current = new IntersectionObserver(cb);
         observer.current.observe(ref.current)
     },[isLoading])
 }
